@@ -1,9 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Randomnumbers from "./Randomnumbers";
 
 function App() {
-	return <div>Hey</div>;
+	return(
+		<div>
+			<Randomnumbers />
+		</div>
+		
+		
+
+	)
 }
 
 export default App;
