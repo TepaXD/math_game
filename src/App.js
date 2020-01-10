@@ -1,9 +1,15 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import Mynav from './components/mynavbar';
+import Mathsview from './components/mathsview';
 
-function App() {
-	return <div>Hey</div>;
+class App extends Component {
+	render() {
+		return (
+			<body>
+				<Mynav />
+				<Mathsview />
+			</body>
+		);
+	}
 }
-
 export default App;
