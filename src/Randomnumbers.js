@@ -9,8 +9,38 @@ class randomnumbers extends React.Component{
         this.fakeans1 = 0;
         this.fakeans2 = 0;
     }
+    
     getRandom(min, max){
         return Math.floor(Math.random() * (max - min)) + min;
+    }
+
+    randomizeOrder(fakeans1,fakeans2,answer){
+        let x = this.getRandom(1,4);
+        let temp;
+        if(x === 1){
+            temp = fakeans1;
+            return{
+                fakeans1: fakeans1 = fakeans2,
+                fakeans2 : fakeans2 = answer,
+                answer : answer = temp
+            };
+        }
+        else if(x === 2){
+            temp = fakeans1;
+            return{
+                fakeans1: fakeans1 = answer,
+                answer : answer = fakeans2,
+                fakeans2 : fakeans2 = temp
+            };
+            
+        }
+        else if(x === 3){
+            return{
+                fakeans1: fakeans1,
+                fakeans2 : fakeans2,
+                answer : answer
+            };
+        }
     }
 
     getAnswer(){
@@ -31,14 +61,13 @@ class randomnumbers extends React.Component{
         while(this.fakeans2 === this.fakeans1 || this.fakeans2 < 0){
             this.fakeans2 = this.getRandom(this.answer-this.getRandom(1, 9),this.answer+this.getRandom(1, 9));
         }
-            
-    
+        let numbers = this.randomizeOrder(this.fakeans1, this.fakeans2, this.answer);
         return{
         num1: this.num1,
         num2: this.num2,
-        answer: this.answer,
-        fakeans1: this.fakeans1,
-        fakeans2: this.fakeans2
+        answer: numbers.answer,
+        fakeans1: numbers.fakeans1,
+        fakeans2: numbers.fakeans2
         };
     
       
