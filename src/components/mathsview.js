@@ -1,23 +1,42 @@
 import React, { Component } from 'react';
-import { Container, Row, Col } from 'react-grid-system';
-
+import { Container, Col } from 'react-grid-system';
+import { Link } from 'react-router-dom';
 import '../styles/mathsview.css';
 
 class Mathsview extends Component {
 	render() {
 		return (
-			<div className="bg">
+			<body className="bg">
 				<Container className="container">
-					<Row className="row">
-						<Col className="box">1</Col>
-						<Col className="triangle">2</Col>
-					</Row>
-					<Row>
-						<Col className="diamond">3</Col>
-						<Col className="circle">4</Col>
-					</Row>
+					<div className="header">
+						<Col>Valitse lasku!</Col>
+					</div>
+					<div className="row">
+						<Link to="/maths/addition" className="link">
+							<Col className="box-1">
+								<p className="text">+</p>
+							</Col>
+						</Link>
+						<Link to="/maths/subtraction" className="link">
+							<Col className="box-2">
+								<p className="text">-</p>
+							</Col>
+						</Link>
+					</div>
+					<div className="row">
+						<Link to="/maths/multiply" className="link">
+							<Col className="box-3">
+								<p className="text">x</p>
+							</Col>
+						</Link>
+						<Link to="/maths/division" className="link">
+							<Col className="box-4">
+								<p className="text">÷</p>
+							</Col>
+						</Link>
+					</div>
 				</Container>
-			</div>
+			</body>
 		);
 	}
 }

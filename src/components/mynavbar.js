@@ -1,16 +1,23 @@
 import React, { Component } from 'react';
 import { Navbar, NavItem, Nav } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import '../styles/mynavbar.css';
 
 class Mynav extends Component {
 	render() {
 		return (
 			<Navbar className="navbar mynav">
-				<Navbar.Brand>LearnMath</Navbar.Brand>
+				<Navbar.Brand>
+					<Link to="/">LearnMath</Link>
+				</Navbar.Brand>
 				<Nav className="ml-auto">
 					<Nav className="navbar-item-container">
-						<NavItem>ABC</NavItem>
-						<NavItem>123</NavItem>
+						<NavItem>
+							<Link to="/language">ABC</Link>
+						</NavItem>
+						<NavItem>
+							<Link to="/maths">123</Link>
+						</NavItem>
 					</Nav>
 				</Nav>
 			</Navbar>
