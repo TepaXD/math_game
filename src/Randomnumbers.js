@@ -7,7 +7,7 @@ class randomnumbers extends React.Component{
         this.num2= 0;
         this.answer= 0;
         this.fakeans1 = 0;
-        this.fakeans2 = 0;
+        this.fakeans2 = 0; 
     }
     
     getRandom(min, max){
@@ -22,7 +22,8 @@ class randomnumbers extends React.Component{
             return{
                 fakeans1: fakeans1 = fakeans2,
                 fakeans2 : fakeans2 = answer,
-                answer : answer = temp
+                answer : answer = temp,
+                
             };
         }
         else if(x === 2){
@@ -44,38 +45,99 @@ class randomnumbers extends React.Component{
     }
 
     getAnswer(){
-        let x = 4
+        let x = 4; //menetelmä
+        let y = 3; //vaikeustaso
         let rem;
-        if(x === 1){
-        this.num1 = this.getRandom(1,11);
-        this.num2 = this.getRandom(1,11);
-        this.answer = this.num1 + this.num2;
+        if(x === 1 && y === 1){
+            this.num1 = this.getRandom(1,6);
+            this.num2 = this.getRandom(1,5);
+            this.answer = this.num1 + this.num2;
         }
-        else if(x === 2){
-        this.num1 = this.getRandom(1,11);
-        this.num2 = this.getRandom(1,5);
-        while (this.num1<this.num2){
-            this.num2 = this.getRandom(1,5); 
+        else if(x === 1 && y === 2){
+            this.num1 = this.getRandom(5,16);
+            this.num2 = this.getRandom(5,15);
+            this.answer = this.num1 + this.num2;
         }
-        this.answer = this.num1 - this.num2;
+        else if(x === 1 && y === 3){
+            this.num1 = this.getRandom(10,31);
+            this.num2 = this.getRandom(10,21);
+            this.answer = this.num1 + this.num2;
         }
 
-        else if(x === 3){
-        this.num1 = this.getRandom(1,5);
-        this.num2 = this.getRandom(1,4);
-        this.answer = this.num1 * this.num2;
+        else if(x === 2 && y === 1){
+            this.num1 = this.getRandom(1,10);
+            this.num2 = this.getRandom(1,5);
+            while (this.num1<this.num2){
+                this.num2 = this.getRandom(1,5); 
+            }
+            this.answer = this.num1 - this.num2;
         }
-        else if(x === 4){
-        this.num1 = this.getRandom(1,20);
-        this.num2 = this.getRandom(1,10);
-        rem = this.num1 % this.num2;
-        while(rem !== 0){
-            this.num1 = this.getRandom(1,21);
-            this.num2 = this.getRandom(1,11);
-            rem = this.num1 % this.num2;
+        else if(x === 2 && y === 2){
+            this.num1 = this.getRandom(10,21);
+            this.num2 = this.getRandom(5,11);
+            while (this.num1<this.num2){
+                this.num2 = this.getRandom(5,11); 
+            }
+            this.answer = this.num1 - this.num2;
         }
-        this.answer = this.num1 / this.num2;
+        else if(x === 2 && y === 3){
+            this.num1 = this.getRandom(20,41);
+            this.num2 = this.getRandom(10,26);
+            while (this.num1<this.num2){
+                this.num2 = this.getRandom(10,26); 
+            }
+            this.answer = this.num1 - this.num2;
+        }
         
+        else if(x === 3 && y === 1){
+            this.num1 = this.getRandom(1,4);
+            this.num2 = this.getRandom(1,4);
+            this.answer = this.num1 * this.num2;
+        }
+        else if(x === 3 && y === 2){
+            this.num1 = this.getRandom(2,6);
+            this.num2 = this.getRandom(2,6);
+            this.answer = this.num1 * this.num2;
+        }
+        else if(x === 3 && y === 3){
+            this.num1 = this.getRandom(3,11);
+            this.num2 = this.getRandom(3,11);
+            this.answer = this.num1 * this.num2;
+        }
+
+        else if(x === 4 && y === 1){
+            this.num1 = this.getRandom(1,11);
+            this.num2 = this.getRandom(1,6);
+            rem = this.num1 % this.num2;
+            while(rem !== 0){
+                this.num1 = this.getRandom(1,11);
+                this.num2 = this.getRandom(1,6);
+                rem = this.num1 % this.num2;
+            }
+            this.answer = this.num1 / this.num2;
+        
+        }
+        else if(x === 4 && y === 2){
+            this.num1 = this.getRandom(10,41);
+            this.num2 = this.getRandom(2,6);
+            rem = this.num1 % this.num2;
+            while(rem !== 0){
+                this.num1 = this.getRandom(10,41);
+                this.num2 = this.getRandom(2,6);
+                rem = this.num1 % this.num2;
+            }
+            this.answer = this.num1 / this.num2;
+        }
+        else if(x === 4 && y === 3){
+            this.num1 = this.getRandom(30,61);
+            this.num2 = this.getRandom(2,11);
+            rem = this.num1 % this.num2;
+            while(rem !== 0){
+                this.num1 = this.getRandom(10,61);
+                this.num2 = this.getRandom(2,11);
+                rem = this.num1 % this.num2;
+            }
+            this.answer = this.num1 / this.num2;
         }
 
         this.fakeans1 = this.getRandom(this.answer-this.getRandom(0, 9),this.answer+this.getRandom(1, 9));
