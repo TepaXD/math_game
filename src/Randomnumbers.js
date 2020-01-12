@@ -44,22 +44,53 @@ class randomnumbers extends React.Component{
     }
 
     getAnswer(){
+        let x = 4
+        let rem;
+        if(x === 1){
         this.num1 = this.getRandom(1,11);
         this.num2 = this.getRandom(1,11);
         this.answer = this.num1 + this.num2;
-        this.fakeans1 = this.getRandom(this.answer-this.getRandom(1, 7),this.answer+this.getRandom(1, 7));
-        this.fakeans2 = this.getRandom(this.answer-this.getRandom(1, 9),this.answer+this.getRandom(1, 9));
+        }
+        else if(x === 2){
+        this.num1 = this.getRandom(1,11);
+        this.num2 = this.getRandom(1,5);
+        while (this.num1<this.num2){
+            this.num2 = this.getRandom(1,5); 
+        }
+        this.answer = this.num1 - this.num2;
+        }
+
+        else if(x === 3){
+        this.num1 = this.getRandom(1,5);
+        this.num2 = this.getRandom(1,4);
+        this.answer = this.num1 * this.num2;
+        }
+        else if(x === 4){
+        this.num1 = this.getRandom(1,20);
+        this.num2 = this.getRandom(1,10);
+        rem = this.num1 % this.num2;
+        while(rem !== 0){
+            this.num1 = this.getRandom(1,21);
+            this.num2 = this.getRandom(1,11);
+            rem = this.num1 % this.num2;
+        }
+        this.answer = this.num1 / this.num2;
+        
+        }
+
+        this.fakeans1 = this.getRandom(this.answer-this.getRandom(0, 9),this.answer+this.getRandom(1, 9));
+        this.fakeans2 = this.getRandom(this.answer-this.getRandom(1, 11),this.answer+this.getRandom(1, 11));
         while(this.fakeans1 === this.answer || this.fakeans1 < 0){
-            this.fakeans1 = this.getRandom(this.answer-this.getRandom(1, 7),this.answer+this.getRandom(1, 7));
+            this.fakeans1 = this.getRandom(this.answer-this.getRandom(0, 9),this.answer+this.getRandom(1, 9));
         }
         while(this.fakeans2 === this.answer || this.fakeans2 < 0){
-            this.fakeans2 = this.getRandom(this.answer-this.getRandom(1, 7),this.answer+this.getRandom(1, 7)); 
+            this.fakeans2 = this.getRandom(this.answer-this.getRandom(0, 9),this.answer+this.getRandom(1, 9)); 
         }
         while(this.fakeans2 === this.answer || this.fakeans2 < 0){
-            this.fakeans2 = this.getRandom(this.answer-this.getRandom(1, 9),this.answer+this.getRandom(1, 9));
+            this.fakeans2 = this.getRandom(this.answer-this.getRandom(0, 11),this.answer+this.getRandom(1, 11));
         }
         while(this.fakeans2 === this.fakeans1 || this.fakeans2 < 0){
-            this.fakeans2 = this.getRandom(this.answer-this.getRandom(1, 9),this.answer+this.getRandom(1, 9));
+            this.fakeans2 = this.getRandom(this.answer-this.getRandom(0, 11),this.answer+this.getRandom(1, 11));
         }
         let numbers = this.randomizeOrder(this.fakeans1, this.fakeans2, this.answer);
         return{
@@ -76,7 +107,7 @@ class randomnumbers extends React.Component{
     render(){
         let data = this.getAnswer();
         return(
-    <h1>{data.num1}+{data.num2}={data.answer} , {data.fakeans1} , {data.fakeans2}</h1>
+    <h1>{data.num1}/{data.num2}={data.answer} , {data.fakeans1} , {data.fakeans2}</h1>
             
         );
 
