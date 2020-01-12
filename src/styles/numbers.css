@@ -1,0 +1,67 @@
+.numbg {
+	margin-top: 30vh;
+	background-color: darkslategray;
+	width: 35vw;
+	height: 30vh;
+	text-align: center;
+	border: 5px solid darkseagreen;
+	color: white;
+	text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000, 0px 1px 0 #000, 0px -1px 0 #000,
+		-1px 0px 0 #000, 1px 0px 0 #000, 2px 2px 0 #000, -2px 2px 0 #000, 2px -2px 0 #000, -2px -2px 0 #000,
+		0px 2px 0 #000, 0px -2px 0 #000, -2px 0px 0 #000, 2px 0px 0 #000, 1px 2px 0 #000, -1px 2px 0 #000,
+		1px -2px 0 #000, -1px -2px 0 #000, 2px 1px 0 #000, -2px 1px 0 #000, 2px -1px 0 #000, -2px -1px 0 #000;
+}
+
+.numbg .equation {
+	padding-top: 2vh;
+	font-size: 60px;
+	letter-spacing: 20px;
+	width: 100%;
+	margin-top: 5px;
+	padding-left: 17%;
+}
+
+.header-num {
+	text-align: center;
+	font-size: 40px;
+	color: white;
+	text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000, 0px 1px 0 #000, 0px -1px 0 #000,
+		-1px 0px 0 #000, 1px 0px 0 #000, 2px 2px 0 #000, -2px 2px 0 #000, 2px -2px 0 #000, -2px -2px 0 #000,
+		0px 2px 0 #000, 0px -2px 0 #000, -2px 0px 0 #000, 2px 0px 0 #000, 1px 2px 0 #000, -1px 2px 0 #000,
+		1px -2px 0 #000, -1px -2px 0 #000, 2px 1px 0 #000, -2px 1px 0 #000, 2px -1px 0 #000, -2px -1px 0 #000;
+}
+
+.numbg .answers {
+	padding-top: 4vh;
+	letter-spacing: 4px;
+	background-color: transparent;
+	border-color: transparent;
+	font-size: 50px;
+	text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000, 0px 1px 0 #000, 0px -1px 0 #000,
+		-1px 0px 0 #000, 1px 0px 0 #000, 2px 2px 0 #000, -2px 2px 0 #000, 2px -2px 0 #000, -2px -2px 0 #000,
+		0px 2px 0 #000, 0px -2px 0 #000, -2px 0px 0 #000, 2px 0px 0 #000, 1px 2px 0 #000, -1px 2px 0 #000,
+		1px -2px 0 #000, -1px -2px 0 #000, 2px 1px 0 #000, -2px 1px 0 #000, 2px -1px 0 #000, -2px -1px 0 #000;
+}
+
+.answers:hover {
+	color: pink;
+	outline-color: transparent;
+}
+
+.answers:active {
+	outline-color: transparent;
+}
+
+.back-button {
+	width: 10vw;
+	background-color: navy;
+}
+
+.img {
+	height: 100px;
+	width: 100px;
+}
+
+.correct {
+	background-color: green;
+}
