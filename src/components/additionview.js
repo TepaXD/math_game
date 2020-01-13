@@ -7,8 +7,6 @@ import '../styles/difficulties.css';
 class Additionview extends Component {
 	state = {
 		difficulty: undefined,
-		correct: 0,
-		wrong: 0,
 	};
 
 	constructor(props) {
@@ -26,8 +24,6 @@ class Additionview extends Component {
 		} else if (e.target.value === 'hard') {
 			this.setState({ difficulty: e.target.value });
 		}
-		this.setState({ correct: 0 });
-		this.setState({ wrong: 0 });
 	}
 
 	resetDifficulty() {

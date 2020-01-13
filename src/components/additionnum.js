@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-grid-system';
 import { Button } from 'react-bootstrap';
+import Endgame from './endgameview';
 import '../styles/numbers.css';
 
 class Additionnum extends Component {
@@ -16,9 +17,11 @@ class Additionnum extends Component {
 		this.answer = 0;
 		this.fakeans1 = 0;
 		this.fakeans2 = 0;
-		this.submitAnswer = this.submitAnswer.bind(this);
 		this.realans = 0;
 		this.counter = 1;
+
+		this.submitAnswer = this.submitAnswer.bind(this);
+		this.restartGame = this.restartGame.bind(this);
 	}
 
 	getRandom(min, max) {
@@ -122,8 +125,25 @@ class Additionnum extends Component {
 			this.setState({ wrongans: this.state.wrongans + 1 });
 		}
 	}
+
+	restartGame() {
+		this.setState({
+			endgame: false,
+		});
+		this.counter = 1;
+		this.setState({ correctans: 0 });
+	}
+
+	props = {
+		correct: this.state.correctans,
+		restartGame: this.restartGame,
+		difficulty: this.props.resetDifficulty,
+	};
+
 	render() {
 		let data = this.getAnswer();
+		var view = <Endgame restartGame={this.restartGame} resetDifficulty={this.props.resetDifficulty} />;
+
 		return (
 			<div>
 				{!this.state.endgame ? (
@@ -173,7 +193,7 @@ class Additionnum extends Component {
 						</Container>
 					</Container>
 				) : (
-					<Container></Container>
+					<Container>{view}</Container>
 				)}
 			</div>
 		);
