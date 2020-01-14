@@ -17,13 +17,6 @@ class Divisionview extends Component {
 
 	startMaths(e) {
 		this.setState({ difficulty: e.target.value });
-		if (e.target.value === 'easy') {
-			this.setState({ difficulty: e.target.value });
-		} else if (e.target.value === 'medium') {
-			this.setState({ difficulty: e.target.value });
-		} else if (e.target.value === 'hard') {
-			this.setState({ difficulty: e.target.value });
-		}
 	}
 
 	resetDifficulty() {
@@ -43,7 +36,7 @@ class Divisionview extends Component {
 			header = <h1>Empty</h1>;
 		}
 		return (
-			<body className="bg">
+			<div className="bg">
 				{!this.state.difficulty ? (
 					<Container className="container">
 						<Row className="header">
@@ -68,7 +61,7 @@ class Divisionview extends Component {
 						<Row>{header}</Row>
 					</Container>
 				)}
-			</body>
+			</div>
 		);
 	}
 }

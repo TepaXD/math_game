@@ -121,7 +121,7 @@ class Divisionnum extends Component {
 		}
 
 		var audio = new Audio('http://wohlsoft.ru/docs/Sounds/SMBX_OPL/SMBX_OPL_Sounds_src/WAV/coin.wav');
-		if (e.target.value == this.realans) {
+		if (e.currentTarget.value == this.realans) {
 			audio.play();
 			this.setState({ correctans: this.state.correctans + 1 });
 		} else {
@@ -163,7 +163,6 @@ class Divisionnum extends Component {
 								</Col>
 								<Col className="score">
 									<img
-										img
 										src="https://www.iconpacks.net/icons/1/free-coin-icon-794-thumb.png"
 										className="img"
 									/>

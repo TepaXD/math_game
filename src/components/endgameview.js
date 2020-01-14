@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Container, Row, Col } from 'react-grid-system';
+import { Row, Col } from 'react-grid-system';
 import { Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './styles/endgame.css';
 
 class Endgame extends Component {
@@ -29,7 +30,7 @@ class Endgame extends Component {
 				<div className="result-card">
 					<Row>
 						<Col className="score">
-							Tuloksesi oli {this.props.score}/20{' '}
+							Tuloksesi oli {this.props.score} / 20{' '}
 							<img src="https://www.iconpacks.net/icons/1/free-coin-icon-794-thumb.png" className="img" />
 						</Col>
 					</Row>
@@ -50,6 +51,11 @@ class Endgame extends Component {
 						</Button>
 						<Button onClick={this.props.restartGame} className="button">
 							Pelaa uudestaan
+						</Button>
+						<Button className="button">
+							<Link to="/" className="button">
+								Palaa valikkoon
+							</Link>
 						</Button>
 					</Row>
 				</div>

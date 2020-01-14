@@ -102,7 +102,7 @@ class Multiplicationnum extends Component {
 		}
 
 		var audio = new Audio('http://wohlsoft.ru/docs/Sounds/SMBX_OPL/SMBX_OPL_Sounds_src/WAV/coin.wav');
-		if (e.target.value == this.realans) {
+		if (e.currentTarget.value == this.realans) {
 			audio.play();
 			this.setState({ correctans: this.state.correctans + 1 });
 		} else {
@@ -143,7 +143,6 @@ class Multiplicationnum extends Component {
 							</Col>
 							<Col className="score">
 								<img
-									img
 									src="https://www.iconpacks.net/icons/1/free-coin-icon-794-thumb.png"
 									className="img"
 								/>
@@ -158,7 +157,7 @@ class Multiplicationnum extends Component {
 						<Row>
 							<Col>
 								<Button className="answers" value={data.answer} onClick={this.submitAnswer}>
-									<div className="answercontainer">{data.answer}</div>
+									{data.answer}
 								</Button>
 								<Button className="answers" value={data.fakeans1} onClick={this.submitAnswer}>
 									{data.fakeans1}

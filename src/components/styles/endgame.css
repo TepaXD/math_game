@@ -45,6 +45,7 @@
 
 .result-card .button:hover {
 	color: red;
+	text-decoration: none;
 }
 
 .result-card .score {

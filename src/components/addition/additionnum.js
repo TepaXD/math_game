@@ -55,18 +55,18 @@ class Additionnum extends Component {
 	}
 
 	getAnswer() {
-		let y = this.props.difficulty; //vaikeustaso
-		if (y === 'easy') {
+		let difficulty = this.props.difficulty; //vaikeustaso
+		if (difficulty === 'easy') {
 			this.num1 = this.getRandom(1, 6);
 			this.num2 = this.getRandom(1, 5);
 			this.answer = this.num1 + this.num2;
 			this.realans = this.answer;
-		} else if (y === 'medium') {
+		} else if (difficulty === 'medium') {
 			this.num1 = this.getRandom(5, 16);
 			this.num2 = this.getRandom(5, 15);
 			this.answer = this.num1 + this.num2;
 			this.realans = this.answer;
-		} else if (y === 'hard') {
+		} else if (difficulty === 'hard') {
 			this.num1 = this.getRandom(10, 31);
 			this.num2 = this.getRandom(10, 21);
 			this.answer = this.num1 + this.num2;
@@ -100,9 +100,8 @@ class Additionnum extends Component {
 		} else {
 			this.counter = this.counter + 1;
 		}
-
 		var audio = new Audio('http://wohlsoft.ru/docs/Sounds/SMBX_OPL/SMBX_OPL_Sounds_src/WAV/coin.wav');
-		if (e.target.value == this.realans) {
+		if (e.currentarget.value == this.realans) {
 			audio.play();
 			this.setState({ correctans: this.state.correctans + 1 });
 		} else {
@@ -143,7 +142,6 @@ class Additionnum extends Component {
 							</Col>
 							<Col className="score">
 								<img
-									img
 									src="https://www.iconpacks.net/icons/1/free-coin-icon-794-thumb.png"
 									className="img"
 								/>

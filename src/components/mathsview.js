@@ -7,7 +7,7 @@ import './styles/mathsview.css';
 class Mathsview extends Component {
 	render() {
 		return (
-			<body className="bg">
+			<div className="bg">
 				<Container className="container">
 					<Row className="header">
 						<Col>Valitse lasku!</Col>
@@ -37,7 +37,7 @@ class Mathsview extends Component {
 						</Link>
 					</Row>
 				</Container>
-			</body>
+			</div>
 		);
 	}
 }

@@ -17,13 +17,6 @@ class Multiplicationview extends Component {
 
 	startMaths(e) {
 		this.setState({ difficulty: e.target.value });
-		if (e.target.value === 'easy') {
-			this.setState({ difficulty: e.target.value });
-		} else if (e.target.value === 'medium') {
-			this.setState({ difficulty: e.target.value });
-		} else if (e.target.value === 'hard') {
-			this.setState({ difficulty: e.target.value });
-		}
 	}
 
 	resetDifficulty() {
@@ -33,17 +26,13 @@ class Multiplicationview extends Component {
 	render() {
 		var header;
 
-		if (this.state.difficulty === 'easy') {
-			header = <Multiplicationnum resetDifficulty={this.resetDifficulty} difficulty={this.state.difficulty} />;
-		} else if (this.state.difficulty === 'medium') {
-			header = <h1>Medium</h1>;
-		} else if (this.state.difficulty === 'hard') {
-			header = <h1>Hard</h1>;
+		if (this.state.difficulty !== undefined) {
+			header = <Multiplicationview resetDifficulty={this.resetDifficulty} difficulty={this.state.difficulty} />;
 		} else {
 			header = <h1>Empty</h1>;
 		}
 		return (
-			<body className="bg">
+			<div className="bg">
 				{!this.state.difficulty ? (
 					<Container className="container">
 						<Row className="header">
@@ -68,7 +57,7 @@ class Multiplicationview extends Component {
 						<Row>{header}</Row>
 					</Container>
 				)}
-			</body>
+			</div>
 		);
 	}
 }

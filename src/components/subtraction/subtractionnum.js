@@ -57,19 +57,22 @@ class Subtractionnum extends Component {
 	getAnswer() {
 		let y = this.props.difficulty; //vaikeustaso
 		if (y === 'easy') {
-			this.num1 = this.getRandom(1, 4);
-			this.num2 = this.getRandom(1, 4);
-			this.answer = this.num1 * this.num2;
+			this.num1 = this.getRandom(1, 10);
+			this.num2 = this.getRandom(1, 5);
+			while (this.num1 < this.num2) {
+				this.num2 = this.getRandom(1, 5);
+			}
+			this.answer = this.num1 - this.num2;
 			this.realans = this.answer;
 		} else if (y === 'medium') {
-			this.num1 = this.getRandom(2, 6);
-			this.num2 = this.getRandom(2, 6);
-			this.answer = this.num1 * this.num2;
+			this.num1 = this.getRandom(15, 26);
+			this.num2 = this.getRandom(5, 11);
+			this.answer = this.num1 - this.num2;
 			this.realans = this.answer;
 		} else if (y === 'hard') {
-			this.num1 = this.getRandom(4, 11);
-			this.num2 = this.getRandom(4, 11);
-			this.answer = this.num1 * this.num2;
+			this.num1 = this.getRandom(30, 41);
+			this.num2 = this.getRandom(10, 21);
+			this.answer = this.num1 - this.num2;
 			this.realans = this.answer;
 		}
 
@@ -102,7 +105,7 @@ class Subtractionnum extends Component {
 		}
 
 		var audio = new Audio('http://wohlsoft.ru/docs/Sounds/SMBX_OPL/SMBX_OPL_Sounds_src/WAV/coin.wav');
-		if (e.target.value == this.realans) {
+		if (e.currentTarget.value == this.realans) {
 			audio.play();
 			this.setState({ correctans: this.state.correctans + 1 });
 		} else {
@@ -143,7 +146,6 @@ class Subtractionnum extends Component {
 							</Col>
 							<Col className="score">
 								<img
-									img
 									src="https://www.iconpacks.net/icons/1/free-coin-icon-794-thumb.png"
 									className="img"
 								/>
