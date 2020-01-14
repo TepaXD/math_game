@@ -55,22 +55,22 @@ class Multiplicationnum extends Component {
 	}
 
 	getAnswer() {
-		let x = 3; //menetelmä
 		let y = this.props.difficulty; //vaikeustaso
-		alert(y);
-		let rem;
-		if (x === 3 && y === 'easy') {
+		if (y === 'easy') {
 			this.num1 = this.getRandom(1, 4);
 			this.num2 = this.getRandom(1, 4);
 			this.answer = this.num1 * this.num2;
-		} else if (x === 3 && y === 2) {
+			this.realans = this.answer;
+		} else if (y === 'medium') {
 			this.num1 = this.getRandom(2, 6);
 			this.num2 = this.getRandom(2, 6);
 			this.answer = this.num1 * this.num2;
-		} else if (x === 3 && y === 3) {
+			this.realans = this.answer;
+		} else if (y === 'hard') {
 			this.num1 = this.getRandom(4, 11);
 			this.num2 = this.getRandom(4, 11);
 			this.answer = this.num1 * this.num2;
+			this.realans = this.answer;
 		}
 
 		this.fakeans1 = this.getRandom(this.answer - this.getRandom(0, 9), this.answer + this.getRandom(1, 9));
@@ -120,7 +120,7 @@ class Multiplicationnum extends Component {
 
 	render() {
 		let data = this.getAnswer();
-		var view = (
+		let view = (
 			<Endgame
 				restartGame={this.restartGame}
 				resetDifficulty={this.props.resetDifficulty}
@@ -152,7 +152,7 @@ class Multiplicationnum extends Component {
 						</Row>
 						<Row className="equation">
 							<Col>
-								{data.num1}+{data.num2}=
+								{data.num1}x{data.num2}=
 							</Col>
 						</Row>
 						<Row>
