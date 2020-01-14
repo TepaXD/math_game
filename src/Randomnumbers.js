@@ -45,7 +45,7 @@ class randomnumbers extends React.Component{
     }
 
     getAnswer(){
-        let x = 4; //menetelmä
+        let x = 2; //menetelmä
         let y = 3; //vaikeustaso
         let rem;
         if(x === 1 && y === 1){
@@ -73,19 +73,13 @@ class randomnumbers extends React.Component{
             this.answer = this.num1 - this.num2;
         }
         else if(x === 2 && y === 2){
-            this.num1 = this.getRandom(10,21);
+            this.num1 = this.getRandom(15,26);
             this.num2 = this.getRandom(5,11);
-            while (this.num1<this.num2){
-                this.num2 = this.getRandom(5,11); 
-            }
             this.answer = this.num1 - this.num2;
         }
         else if(x === 2 && y === 3){
-            this.num1 = this.getRandom(20,41);
-            this.num2 = this.getRandom(10,26);
-            while (this.num1<this.num2){
-                this.num2 = this.getRandom(10,26); 
-            }
+            this.num1 = this.getRandom(30,41);
+            this.num2 = this.getRandom(10,21);
             this.answer = this.num1 - this.num2;
         }
         
@@ -100,8 +94,8 @@ class randomnumbers extends React.Component{
             this.answer = this.num1 * this.num2;
         }
         else if(x === 3 && y === 3){
-            this.num1 = this.getRandom(3,11);
-            this.num2 = this.getRandom(3,11);
+            this.num1 = this.getRandom(4,11);
+            this.num2 = this.getRandom(4,11);
             this.answer = this.num1 * this.num2;
         }
 
@@ -169,7 +163,7 @@ class randomnumbers extends React.Component{
     render(){
         let data = this.getAnswer();
         return(
-    <h1>{data.num1}/{data.num2}={data.answer} , {data.fakeans1} , {data.fakeans2}</h1>
+    <h1>{data.num1}-{data.num2}={data.answer} , {data.fakeans1} , {data.fakeans2}</h1>
             
         );
 
