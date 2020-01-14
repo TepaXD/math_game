@@ -1,10 +1,12 @@
 .numbg {
-	margin-top: 30vh;
-	background-color: darkslategray;
-	width: 35vw;
-	height: 30vh;
+	background-image: url('../images/paper.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	margin-top: 20px;
+	width: 50vw;
+	height: 90vh;
 	text-align: center;
-	border: 5px solid darkseagreen;
 	color: white;
 	text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000, 0px 1px 0 #000, 0px -1px 0 #000,
 		-1px 0px 0 #000, 1px 0px 0 #000, 2px 2px 0 #000, -2px 2px 0 #000, 2px -2px 0 #000, -2px -2px 0 #000,
@@ -12,17 +14,21 @@
 		1px -2px 0 #000, -1px -2px 0 #000, 2px 1px 0 #000, -2px 1px 0 #000, 2px -1px 0 #000, -2px -1px 0 #000;
 }
 
-.numbg .equation {
-	padding-top: 2vh;
-	font-size: 60px;
-	letter-spacing: 20px;
-	width: 100%;
+.equation {
+	padding-top: 1vh;
+	font-size: 150px;
+	letter-spacing: 5px;
 	margin-top: 5px;
-	padding-left: 17%;
+	text-align: center;
+	font-family: 'Pirata One', cursive;
 }
 
 .header-num {
+	padding-top: 20px;
+	width: 100%;
+	letter-spacing: 4px;
 	text-align: center;
+	font-family: 'Pirata One', cursive;
 	font-size: 40px;
 	color: white;
 	text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000, 0px 1px 0 #000, 0px -1px 0 #000,
@@ -32,19 +38,23 @@
 }
 
 .numbg .answers {
+	margin-right: 4px;
+	width: 200px;
 	padding-top: 4vh;
 	letter-spacing: 4px;
-	background-color: transparent;
-	border-color: transparent;
-	font-size: 50px;
+	background-color: rgb(0, 162, 255);
+	border-color: black;
+	font-size: 80px;
 	text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000, 0px 1px 0 #000, 0px -1px 0 #000,
 		-1px 0px 0 #000, 1px 0px 0 #000, 2px 2px 0 #000, -2px 2px 0 #000, 2px -2px 0 #000, -2px -2px 0 #000,
 		0px 2px 0 #000, 0px -2px 0 #000, -2px 0px 0 #000, 2px 0px 0 #000, 1px 2px 0 #000, -1px 2px 0 #000,
 		1px -2px 0 #000, -1px -2px 0 #000, 2px 1px 0 #000, -2px 1px 0 #000, 2px -1px 0 #000, -2px -1px 0 #000;
+	font-family: 'Pirata One', cursive;
+	letter-spacing: 8px;
 }
 
 .answers:hover {
-	color: pink;
+	background-color: lightskyblue;
 	outline-color: transparent;
 }
 
@@ -52,14 +62,42 @@
 	outline-color: transparent;
 }
 
+.numbg .score {
+	margin-top: 20px;
+	font-size: 60px;
+	font-family: 'Pirata One', cursive;
+	letter-spacing: 4px;
+}
+
 .back-button {
-	width: 10vw;
-	background-color: navy;
+	width: 15vw;
+	background-color: transparent;
+	border-color: transparent;
+	margin-left: 100px;
+	margin-right: 100px;
+	font-size: 40px;
+	font-family: 'Pirata One', cursive;
+	color: black;
+}
+
+.back-button:hover {
+	color: red;
+	background-color: transparent;
+	border-color: transparent;
+}
+
+.back-button:active:focus {
+	text-decoration: none;
+	background-color: transparent;
+	border-color: transparent;
 }
 
 .img {
-	height: 100px;
-	width: 100px;
+	height: 50px;
+	width: 50px;
+}
+.parrot-cont {
+	width: 100vw;
 }
 
 .correct {

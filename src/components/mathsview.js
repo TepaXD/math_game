@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Col } from 'react-grid-system';
 import { Link } from 'react-router-dom';
-import '../styles/mathsview.css';
+import './styles/mathsview.css';
 
 class Mathsview extends Component {
 	render() {

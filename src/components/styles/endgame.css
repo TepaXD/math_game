@@ -1,0 +1,59 @@
+.result-card {
+	margin-top: 20px;
+	height: 90vh;
+	background-color: transparent;
+	width: 80vw;
+	text-align: center;
+	padding-top: 10%;
+	background-image: url('../images/paper.png');
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.message {
+	color: white;
+	text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000, 0px 1px 0 #000, 0px -1px 0 #000,
+		-1px 0px 0 #000, 1px 0px 0 #000, 2px 2px 0 #000, -2px 2px 0 #000, 2px -2px 0 #000, -2px -2px 0 #000,
+		0px 2px 0 #000, 0px -2px 0 #000, -2px 0px 0 #000, 2px 0px 0 #000, 1px 2px 0 #000, -1px 2px 0 #000,
+		1px -2px 0 #000, -1px -2px 0 #000, 2px 1px 0 #000, -2px 1px 0 #000, 2px -1px 0 #000, -2px -1px 0 #000;
+	font-size: 30px;
+	font-family: 'Pirata One', cursive;
+	letter-spacing: 4px;
+}
+
+.img-parrot {
+	height: 400px;
+	width: 400px;
+	margin-left: 15vw;
+}
+
+.buttons {
+	padding-left: 18vw;
+	margin-top: 100px;
+	font-family: 'Pirata One', cursive;
+	letter-spacing: 4px;
+}
+
+.result-card .button {
+	background-color: transparent;
+	border-color: transparent;
+	font-size: 40px;
+	color: black;
+	margin-right: 5px;
+}
+
+.result-card .button:hover {
+	color: red;
+}
+
+.result-card .score {
+	font-size: 60px;
+	font-family: 'Pirata One', cursive;
+	letter-spacing: 6px;
+	color: white;
+	text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000, 0px 1px 0 #000, 0px -1px 0 #000,
+		-1px 0px 0 #000, 1px 0px 0 #000, 2px 2px 0 #000, -2px 2px 0 #000, 2px -2px 0 #000, -2px -2px 0 #000,
+		0px 2px 0 #000, 0px -2px 0 #000, -2px 0px 0 #000, 2px 0px 0 #000, 1px 2px 0 #000, -1px 2px 0 #000,
+		1px -2px 0 #000, -1px -2px 0 #000, 2px 1px 0 #000, -2px 1px 0 #000, 2px -1px 0 #000, -2px -1px 0 #000;
+}
+/*https://www.freepngimg.com/thumb/parrot/37037-7-pirate-parrot-transparent-image.png*/

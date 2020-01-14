@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-grid-system';
 import { Button } from 'react-bootstrap';
-import Endgame from './endgameview';
+import Endgame from '../endgameview';
 import '../styles/numbers.css';
 
 class Additionnum extends Component {
@@ -117,10 +117,9 @@ class Additionnum extends Component {
 		}
 
 		var audio = new Audio('http://wohlsoft.ru/docs/Sounds/SMBX_OPL/SMBX_OPL_Sounds_src/WAV/coin.wav');
-		Button.classList += ' correct';
 		if (e.target.value == this.realans) {
-			this.setState({ correctans: this.state.correctans + 1 });
 			audio.play();
+			this.setState({ correctans: this.state.correctans + 1 });
 		} else {
 			this.setState({ wrongans: this.state.wrongans + 1 });
 		}
@@ -134,40 +133,41 @@ class Additionnum extends Component {
 		this.setState({ correctans: 0 });
 	}
 
-	props = {
-		correct: this.state.correctans,
-		restartGame: this.restartGame,
-		difficulty: this.props.resetDifficulty,
-	};
-
 	render() {
 		let data = this.getAnswer();
-		var view = <Endgame restartGame={this.restartGame} resetDifficulty={this.props.resetDifficulty} />;
+		var view = (
+			<Endgame
+				restartGame={this.restartGame}
+				resetDifficulty={this.props.resetDifficulty}
+				score={this.state.correctans}
+			/>
+		);
 
 		return (
-			<div>
+			<Container>
 				{!this.state.endgame ? (
-					<Container>
+					<Container className="numbg">
 						<Container className="container">
 							<Row className="header-num">
-								<Col>Valitse oikea vastaus saadaksesi pisteitä!</Col>
+								<Col>Valitse oikea vastaus kerätäksesi kolikoita!</Col>
 							</Row>
 							<Row>
 								<Col>
 									<Button onClick={this.props.resetDifficulty} className="back-button">
-										Takaisin
+										Poistu pelistä
 									</Button>
+								</Col>
+								<Col className="score">
 									<img
 										img
 										src="https://www.iconpacks.net/icons/1/free-coin-icon-794-thumb.png"
 										className="img"
 									/>
 									{this.state.correctans}
-									<h1>{this.counter}/20</h1>
 								</Col>
 							</Row>
 						</Container>
-						<Container className="numbg">
+						<Container>
 							<Row className="equation">
 								<Col>
 									{data.num1}+{data.num2}=
@@ -178,24 +178,23 @@ class Additionnum extends Component {
 									<Button className="answers" value={data.answer} onClick={this.submitAnswer}>
 										{data.answer}
 									</Button>
-								</Col>
-								<Col>
 									<Button className="answers" value={data.fakeans1} onClick={this.submitAnswer}>
 										{data.fakeans1}
 									</Button>
-								</Col>
-								<Col>
 									<Button className="answers" value={data.fakeans2} onClick={this.submitAnswer}>
 										{data.fakeans2}
 									</Button>
 								</Col>
+							</Row>
+							<Row>
+								<Col className="score">Kysymys: {this.counter}/20</Col>
 							</Row>
 						</Container>
 					</Container>
 				) : (
 					<Container>{view}</Container>
 				)}
-			</div>
+			</Container>
 		);
 	}
 }

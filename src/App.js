@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Mynav from './components/mynavbar';
 import Mathsview from './components/mathsview';
-import Additionview from './components/additionview';
+import Additionview from './components/addition/additionview';
 
 class App extends Component {
 	render() {

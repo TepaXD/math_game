@@ -34,7 +34,7 @@ class Additionview extends Component {
 		var header;
 
 		if (this.state.difficulty === 'easy') {
-			header = <Additionnum resetDifficulty={this.resetDifficulty} />;
+			header = <Additionnum resetDifficulty={this.resetDifficulty} difficulty={this.state.difficulty} />;
 		} else if (this.state.difficulty === 'medium') {
 			header = <h1>Medium</h1>;
 		} else if (this.state.difficulty === 'hard') {
@@ -51,13 +51,15 @@ class Additionview extends Component {
 						</Row>
 						<Row className="difficulties">
 							<Button className="easy" value="easy" onClick={this.startMaths}>
-								Helppo
+								Normaali
 							</Button>
+
 							<Button className="medium" value="medium" onClick={this.startMaths}>
 								Haastava
 							</Button>
+
 							<Button className="hard" value="hard" onClick={this.startMaths}>
-								Mestari!
+								Mestari
 							</Button>
 						</Row>
 					</Container>

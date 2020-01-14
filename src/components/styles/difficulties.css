@@ -1,0 +1,86 @@
+.container {
+	margin-top: 150px;
+	margin: 0 auto;
+	grid-gap: 2rem;
+	display: grid;
+}
+.container .header {
+	text-align: center;
+	font-size: 100px;
+	color: white;
+	font-family: 'Pirata One', cursive;
+	letter-spacing: 4px;
+	text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000, 0px 1px 0 #000, 0px -1px 0 #000,
+		-1px 0px 0 #000, 1px 0px 0 #000, 2px 2px 0 #000, -2px 2px 0 #000, 2px -2px 0 #000, -2px -2px 0 #000,
+		0px 2px 0 #000, 0px -2px 0 #000, -2px 0px 0 #000, 2px 0px 0 #000, 1px 2px 0 #000, -1px 2px 0 #000,
+		1px -2px 0 #000, -1px -2px 0 #000, 2px 1px 0 #000, -2px 1px 0 #000, 2px -1px 0 #000, -2px -1px 0 #000;
+}
+
+.container .difficulties .easy {
+	background-color: transparent;
+	background-image: url('../images/paper.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	border: solid 10px transparent;
+	margin-right: 10px;
+	margin-left: 30px;
+	height: 300px;
+	width: 350px;
+	text-align: center;
+	font-family: 'Pirata One', cursive;
+	letter-spacing: 4px;
+	font-size: 60px;
+	color: white;
+	text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000, 0px 1px 0 #000, 0px -1px 0 #000,
+		-1px 0px 0 #000, 1px 0px 0 #000, 2px 2px 0 #000, -2px 2px 0 #000, 2px -2px 0 #000, -2px -2px 0 #000,
+		0px 2px 0 #000, 0px -2px 0 #000, -2px 0px 0 #000, 2px 0px 0 #000, 1px 2px 0 #000, -1px 2px 0 #000,
+		1px -2px 0 #000, -1px -2px 0 #000, 2px 1px 0 #000, -2px 1px 0 #000, 2px -1px 0 #000, -2px -1px 0 #000;
+}
+
+.container .difficulties .easy:hover {
+	text-decoration-line: underline;
+	text-decoration-color: green;
+}
+
+.container .difficulties .medium {
+	background-color: transparent;
+	background-image: url('../images/paper.png');
+	background-size: cover;
+	border: solid 10px rgb(255, 187, 0);
+	margin-right: 10px;
+	width: 350px;
+	text-align: center;
+	font-family: 'Pirata One', cursive;
+	letter-spacing: 4px;
+	font-size: 60px;
+	color: white;
+	text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000, 0px 1px 0 #000, 0px -1px 0 #000,
+		-1px 0px 0 #000, 1px 0px 0 #000, 2px 2px 0 #000, -2px 2px 0 #000, 2px -2px 0 #000, -2px -2px 0 #000,
+		0px 2px 0 #000, 0px -2px 0 #000, -2px 0px 0 #000, 2px 0px 0 #000, 1px 2px 0 #000, -1px 2px 0 #000,
+		1px -2px 0 #000, -1px -2px 0 #000, 2px 1px 0 #000, -2px 1px 0 #000, 2px -1px 0 #000, -2px -1px 0 #000;
+}
+
+.container .difficulties .medium:hover {
+	background-color: rgb(255, 187, 0);
+}
+
+.container .difficulties .hard {
+	background-color: transparent;
+	background-image: url('../images/paper.png');
+	background-size: cover;
+	border: solid 10px rgb(197, 30, 0);
+	width: 350px;
+	text-align: center;
+	font-family: 'Pirata One', cursive;
+	letter-spacing: 4px;
+	font-size: 60px;
+	color: white;
+	text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000, 0px 1px 0 #000, 0px -1px 0 #000,
+		-1px 0px 0 #000, 1px 0px 0 #000, 2px 2px 0 #000, -2px 2px 0 #000, 2px -2px 0 #000, -2px -2px 0 #000,
+		0px 2px 0 #000, 0px -2px 0 #000, -2px 0px 0 #000, 2px 0px 0 #000, 1px 2px 0 #000, -1px 2px 0 #000,
+		1px -2px 0 #000, -1px -2px 0 #000, 2px 1px 0 #000, -2px 1px 0 #000, 2px -1px 0 #000, -2px -1px 0 #000;
+}
+
+.container .difficulties .hard:hover {
+	background-color: rgb(197, 30, 0);
+}
