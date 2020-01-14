@@ -20,6 +20,7 @@
 	font-size: 3vmin;
 	font-family: 'Pirata One', cursive;
 	letter-spacing: 4px;
+	padding-top: 30px;
 }
 
 .img-parrot {
@@ -29,8 +30,8 @@
 }
 
 .buttons {
-	padding-left: 32vmin;
-	margin-top: 100px;
+	padding-left: 25vmin;
+	margin-top: 50px;
 	font-family: 'Pirata One', cursive;
 	letter-spacing: 4px;
 }

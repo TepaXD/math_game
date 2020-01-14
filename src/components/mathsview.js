@@ -8,11 +8,11 @@ class Mathsview extends Component {
 	render() {
 		return (
 			<div className="bg">
-				<Container className="container">
+				<div className="container">
 					<Row className="header">
 						<Col>Valitse lasku!</Col>
 					</Row>
-					<Row className="row">
+					<div>
 						<Link to="/addition" className="link">
 							<Button className="box-1">
 								<p className="text">+</p>
@@ -23,8 +23,8 @@ class Mathsview extends Component {
 								<p className="text">-</p>
 							</Button>
 						</Link>
-					</Row>
-					<Row className="row">
+					</div>
+					<div>
 						<Link to="/multiplication" className="link">
 							<Button className="box-3">
 								<p className="text">x</p>
@@ -35,8 +35,8 @@ class Mathsview extends Component {
 								<p className="text">÷</p>
 							</Button>
 						</Link>
-					</Row>
-				</Container>
+					</div>
+				</div>
 			</div>
 		);
 	}

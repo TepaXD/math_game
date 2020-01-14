@@ -27,7 +27,7 @@ class Multiplicationview extends Component {
 		var header;
 
 		if (this.state.difficulty !== undefined) {
-			header = <Multiplicationview resetDifficulty={this.resetDifficulty} difficulty={this.state.difficulty} />;
+			header = <Multiplicationnum resetDifficulty={this.resetDifficulty} difficulty={this.state.difficulty} />;
 		} else {
 			header = <h1>Empty</h1>;
 		}

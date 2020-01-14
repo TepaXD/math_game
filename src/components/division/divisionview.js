@@ -26,12 +26,8 @@ class Divisionview extends Component {
 	render() {
 		var header;
 
-		if (this.state.difficulty === 'easy') {
+		if (this.state.difficulty !== undefined) {
 			header = <Divisionnum resetDifficulty={this.resetDifficulty} difficulty={this.state.difficulty} />;
-		} else if (this.state.difficulty === 'medium') {
-			header = <h1>Medium</h1>;
-		} else if (this.state.difficulty === 'hard') {
-			header = <h1>Hard</h1>;
 		} else {
 			header = <h1>Empty</h1>;
 		}

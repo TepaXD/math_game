@@ -1,20 +1,21 @@
 .bg {
-	background-color: grey;
+	background-image: url('../images/beach.png');
 	position: fixed;
 	width: 100vw;
 	height: 100vh;
-	background-image: url('../images/beach.png');
 	background-size: cover;
-	overflow: scroll;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	padding-left: 200px;
 }
 .container {
 	margin: 0 auto;
-	grid-gap: 2rem;
 	display: grid;
 	width: 100vw;
+	padding-bottom: 100px;
 }
 
-.row .text {
+.text {
 	font-size: 175px;
 	color: white;
 	text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000, 0px 1px 0 #000, 0px -1px 0 #000,
@@ -26,6 +27,7 @@
 }
 
 .container .header {
+	padding-right: 10vw;
 	font-size: 100px;
 	color: white;
 	text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000, 0px 1px 0 #000, 0px -1px 0 #000,
@@ -46,8 +48,7 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	border: solid 10px transparent;
-	margin-right: 10px;
-	margin-left: 8vmin;
+
 	width: 450px;
 	height: 380px;
 	-o-transition: 0.2s;
@@ -72,7 +73,7 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	border: solid 10px transparent;
-	margin-right: 10px;
+
 	width: 450px;
 	height: 380px;
 	-o-transition: 0.2s;
@@ -97,8 +98,7 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	border: solid 10px transparent;
-	margin-right: 10px;
-	margin-left: 8vmin;
+
 	width: 450px;
 	height: 380px;
 	margin-right: 15px;
@@ -139,4 +139,46 @@
 	background-size: cover;
 	background-position: center;
 	background-image: url('../images/cartoonpaper.png');
+}
+
+@media (min-width: 991px) {
+	.container {
+		grid-gap: 1rem;
+		display: grid;
+		width: 65vw;
+	}
+}
+
+@media (max-width: 1470px) {
+	.container {
+		grid-gap: 1rem;
+		display: grid;
+		width: 80vw;
+	}
+	.bg {
+		padding-left: 200px;
+	}
+}
+
+@media (min-width: 786px) {
+	.container {
+		width: 150vw;
+	}
+	.bg {
+		padding-left: 100px;
+	}
+}
+
+@media (max-width: 767px) {
+	.container {
+		width: 100vw;
+		margin-right: 50vw;
+	}
+	.bg {
+		padding-left: 10px;
+	}
+
+	.container .header {
+		font-size: 20vw;
+	}
 }

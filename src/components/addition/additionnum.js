@@ -101,7 +101,7 @@ class Additionnum extends Component {
 			this.counter = this.counter + 1;
 		}
 		var audio = new Audio('http://wohlsoft.ru/docs/Sounds/SMBX_OPL/SMBX_OPL_Sounds_src/WAV/coin.wav');
-		if (e.currentarget.value == this.realans) {
+		if (e.currentTarget.value == this.realans) {
 			audio.play();
 			this.setState({ correctans: this.state.correctans + 1 });
 		} else {
