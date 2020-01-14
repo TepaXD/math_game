@@ -1,11 +1,11 @@
 .numbg {
-	background-image: url('../images/paper.png');
+	background-image: url('../images/cartoonpaper-rotated.png');
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: contain;
 	background-position: center;
-	margin-top: 20px;
-	width: 50vw;
-	height: 90vh;
+	padding-top: 10px;
+	width: 1200px;
+	height: 145ch;
 	text-align: center;
 	color: white;
 	text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000, 0px 1px 0 #000, 0px -1px 0 #000,
@@ -15,7 +15,6 @@
 }
 
 .equation {
-	padding-top: 1vh;
 	font-size: 150px;
 	letter-spacing: 5px;
 	margin-top: 5px;
@@ -24,12 +23,13 @@
 }
 
 .header-num {
-	padding-top: 20px;
+	padding-top: 100px;
 	width: 100%;
-	letter-spacing: 4px;
+	letter-spacing: 2px;
 	text-align: center;
 	font-family: 'Pirata One', cursive;
-	font-size: 40px;
+	font-size: 4vmin;
+	padding-left: 50px;
 	color: white;
 	text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000, 0px 1px 0 #000, 0px -1px 0 #000,
 		-1px 0px 0 #000, 1px 0px 0 #000, 2px 2px 0 #000, -2px 2px 0 #000, 2px -2px 0 #000, -2px -2px 0 #000,
@@ -38,13 +38,20 @@
 }
 
 .numbg .answers {
-	margin-right: 4px;
-	width: 200px;
-	padding-top: 4vh;
+	text-align: center;
+	margin-right: 6px;
+	display: table-cell;
+	vertical-align: text-top;
+	padding-bottom: 90px;
+	background-color: transparent;
+	background-position: center;
+	border: 10px solid transparent;
+	width: 280px;
 	letter-spacing: 4px;
-	background-color: rgb(0, 162, 255);
-	border-color: black;
-	font-size: 80px;
+	background-image: url('../images/treasure.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	font-size: 5vmin;
 	text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000, 0px 1px 0 #000, 0px -1px 0 #000,
 		-1px 0px 0 #000, 1px 0px 0 #000, 2px 2px 0 #000, -2px 2px 0 #000, 2px -2px 0 #000, -2px -2px 0 #000,
 		0px 2px 0 #000, 0px -2px 0 #000, -2px 0px 0 #000, 2px 0px 0 #000, 1px 2px 0 #000, -1px 2px 0 #000,
@@ -54,8 +61,10 @@
 }
 
 .answers:hover {
-	background-color: lightskyblue;
 	outline-color: transparent;
+	background-size: cover;
+	background-position: center;
+	background-color: lightskyblue;
 }
 
 .answers:active {
@@ -64,7 +73,7 @@
 
 .numbg .score {
 	margin-top: 20px;
-	font-size: 60px;
+	font-size: 8vmin;
 	font-family: 'Pirata One', cursive;
 	letter-spacing: 4px;
 }
@@ -73,9 +82,8 @@
 	width: 15vw;
 	background-color: transparent;
 	border-color: transparent;
-	margin-left: 100px;
-	margin-right: 100px;
-	font-size: 40px;
+	margin-left: 150px;
+	font-size: 4vmin;
 	font-family: 'Pirata One', cursive;
 	color: black;
 }

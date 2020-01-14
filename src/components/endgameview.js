@@ -26,7 +26,7 @@ class Endgame extends Component {
 		this.checkScore();
 		return (
 			<div>
-				<Container className="result-card">
+				<div className="result-card">
 					<Row>
 						<Col className="score">
 							Tuloksesi oli {this.props.score}/20{' '}
@@ -52,7 +52,7 @@ class Endgame extends Component {
 							Pelaa uudestaan
 						</Button>
 					</Row>
-				</Container>
+				</div>
 			</div>
 		);
 	}

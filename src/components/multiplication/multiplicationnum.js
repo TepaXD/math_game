@@ -4,7 +4,7 @@ import { Button } from 'react-bootstrap';
 import Endgame from '../endgameview';
 import '../styles/numbers.css';
 
-class Additionnum extends Component {
+class Multiplicationnum extends Component {
 	state = {
 		correctans: 0,
 		wrongans: 0,
@@ -55,37 +55,11 @@ class Additionnum extends Component {
 	}
 
 	getAnswer() {
-		let x = 1; //menetelmä
-		let y = 1; //vaikeustaso
+		let x = 3; //menetelmä
+		let y = this.props.difficulty; //vaikeustaso
+		alert(y);
 		let rem;
-		if (x === 1 && y === 1) {
-			this.num1 = this.getRandom(1, 6);
-			this.num2 = this.getRandom(1, 5);
-			this.answer = this.num1 + this.num2;
-		} else if (x === 1 && y === 2) {
-			this.num1 = this.getRandom(5, 16);
-			this.num2 = this.getRandom(5, 15);
-			this.answer = this.num1 + this.num2;
-		} else if (x === 1 && y === 3) {
-			this.num1 = this.getRandom(10, 31);
-			this.num2 = this.getRandom(10, 21);
-			this.answer = this.num1 + this.num2;
-		} else if (x === 2 && y === 1) {
-			this.num1 = this.getRandom(1, 10);
-			this.num2 = this.getRandom(1, 5);
-			while (this.num1 < this.num2) {
-				this.num2 = this.getRandom(1, 5);
-			}
-			this.answer = this.num1 - this.num2;
-		} else if (x === 2 && y === 2) {
-			this.num1 = this.getRandom(15, 26);
-			this.num2 = this.getRandom(5, 11);
-			this.answer = this.num1 - this.num2;
-		} else if (x === 2 && y === 3) {
-			this.num1 = this.getRandom(30, 41);
-			this.num2 = this.getRandom(10, 21);
-			this.answer = this.num1 - this.num2;
-		} else if (x === 3 && y === 1) {
+		if (x === 3 && y === 'easy') {
 			this.num1 = this.getRandom(1, 4);
 			this.num2 = this.getRandom(1, 4);
 			this.answer = this.num1 * this.num2;
@@ -97,36 +71,6 @@ class Additionnum extends Component {
 			this.num1 = this.getRandom(4, 11);
 			this.num2 = this.getRandom(4, 11);
 			this.answer = this.num1 * this.num2;
-		} else if (x === 4 && y === 1) {
-			this.num1 = this.getRandom(1, 11);
-			this.num2 = this.getRandom(1, 6);
-			rem = this.num1 % this.num2;
-			while (rem !== 0) {
-				this.num1 = this.getRandom(1, 11);
-				this.num2 = this.getRandom(1, 6);
-				rem = this.num1 % this.num2;
-			}
-			this.answer = this.num1 / this.num2;
-		} else if (x === 4 && y === 2) {
-			this.num1 = this.getRandom(10, 41);
-			this.num2 = this.getRandom(2, 6);
-			rem = this.num1 % this.num2;
-			while (rem !== 0) {
-				this.num1 = this.getRandom(10, 41);
-				this.num2 = this.getRandom(2, 6);
-				rem = this.num1 % this.num2;
-			}
-			this.answer = this.num1 / this.num2;
-		} else if (x === 4 && y === 3) {
-			this.num1 = this.getRandom(30, 61);
-			this.num2 = this.getRandom(2, 11);
-			rem = this.num1 % this.num2;
-			while (rem !== 0) {
-				this.num1 = this.getRandom(10, 61);
-				this.num2 = this.getRandom(2, 11);
-				rem = this.num1 % this.num2;
-			}
-			this.answer = this.num1 / this.num2;
 		}
 
 		this.fakeans1 = this.getRandom(this.answer - this.getRandom(0, 9), this.answer + this.getRandom(1, 9));
@@ -238,4 +182,4 @@ class Additionnum extends Component {
 	}
 }
 
-export default Additionnum;
+export default Multiplicationnum;

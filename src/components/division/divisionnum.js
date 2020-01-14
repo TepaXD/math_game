@@ -4,7 +4,7 @@ import { Button } from 'react-bootstrap';
 import Endgame from '../endgameview';
 import '../styles/numbers.css';
 
-class Additionnum extends Component {
+class Divisionnum extends Component {
 	state = {
 		correctans: 0,
 		wrongans: 0,
@@ -19,7 +19,7 @@ class Additionnum extends Component {
 		this.fakeans2 = 0;
 		this.realans = 0;
 		this.counter = 1;
-		this.max = 20;
+
 		this.submitAnswer = this.submitAnswer.bind(this);
 		this.restartGame = this.restartGame.bind(this);
 	}
@@ -151,7 +151,7 @@ class Additionnum extends Component {
 	}
 
 	submitAnswer(e) {
-		if (this.counter === this.max) {
+		if (this.counter === 20) {
 			this.setState({ endgame: true });
 		} else {
 			this.counter = this.counter + 1;
@@ -187,49 +187,51 @@ class Additionnum extends Component {
 		return (
 			<Container>
 				{!this.state.endgame ? (
-					<div className="numbg">
-						<Row className="header-num">
-							<Col>Valitse oikea vastaus kerätäksesi kolikoita!</Col>
-						</Row>
-						<Row>
-							<Col>
-								<Button onClick={this.props.resetDifficulty} className="back-button">
-									Poistu pelistä
-								</Button>
-							</Col>
-							<Col className="score">
-								<img
-									img
-									src="https://www.iconpacks.net/icons/1/free-coin-icon-794-thumb.png"
-									className="img"
-								/>
-								{this.state.correctans}
-							</Col>
-						</Row>
-						<Row className="equation">
-							<Col>
-								{data.num1}+{data.num2}=
-							</Col>
-						</Row>
-						<Row>
-							<Col>
-								<Button className="answers" value={data.answer} onClick={this.submitAnswer}>
-									<div className="answercontainer">{data.answer}</div>
-								</Button>
-								<Button className="answers" value={data.fakeans1} onClick={this.submitAnswer}>
-									{data.fakeans1}
-								</Button>
-								<Button className="answers" value={data.fakeans2} onClick={this.submitAnswer}>
-									{data.fakeans2}
-								</Button>
-							</Col>
-						</Row>
-						<Row>
-							<Col className="score">
-								Kysymys: {this.counter} / {this.max}
-							</Col>
-						</Row>
-					</div>
+					<Container className="numbg">
+						<Container className="container">
+							<Row className="header-num">
+								<Col>Valitse oikea vastaus kerätäksesi kolikoita!</Col>
+							</Row>
+							<Row>
+								<Col>
+									<Button onClick={this.props.resetDifficulty} className="back-button">
+										Poistu pelistä
+									</Button>
+								</Col>
+								<Col className="score">
+									<img
+										img
+										src="https://www.iconpacks.net/icons/1/free-coin-icon-794-thumb.png"
+										className="img"
+									/>
+									{this.state.correctans}
+								</Col>
+							</Row>
+						</Container>
+						<Container>
+							<Row className="equation">
+								<Col>
+									{data.num1}+{data.num2}=
+								</Col>
+							</Row>
+							<Row>
+								<Col>
+									<Button className="answers" value={data.answer} onClick={this.submitAnswer}>
+										{data.answer}
+									</Button>
+									<Button className="answers" value={data.fakeans1} onClick={this.submitAnswer}>
+										{data.fakeans1}
+									</Button>
+									<Button className="answers" value={data.fakeans2} onClick={this.submitAnswer}>
+										{data.fakeans2}
+									</Button>
+								</Col>
+							</Row>
+							<Row>
+								<Col className="score">Kysymys: {this.counter}/20</Col>
+							</Row>
+						</Container>
+					</Container>
 				) : (
 					<Container>{view}</Container>
 				)}
@@ -238,4 +240,4 @@ class Additionnum extends Component {
 	}
 }
 
-export default Additionnum;
+export default Divisionnum;

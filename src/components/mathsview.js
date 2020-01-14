@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Container, Col } from 'react-grid-system';
+import { Container, Row, Col } from 'react-grid-system';
 import { Link } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
 import './styles/mathsview.css';
 
 class Mathsview extends Component {
@@ -8,33 +9,33 @@ class Mathsview extends Component {
 		return (
 			<body className="bg">
 				<Container className="container">
-					<div className="header">
+					<Row className="header">
 						<Col>Valitse lasku!</Col>
-					</div>
-					<div className="row">
-						<Link to="/maths/addition" className="link">
-							<Col className="box-1">
+					</Row>
+					<Row className="row">
+						<Link to="/addition" className="link">
+							<Button className="box-1">
 								<p className="text">+</p>
-							</Col>
+							</Button>
 						</Link>
-						<Link to="/maths/subtraction" className="link">
-							<Col className="box-2">
+						<Link to="/subtraction" className="link">
+							<Button className="box-2">
 								<p className="text">-</p>
-							</Col>
+							</Button>
 						</Link>
-					</div>
-					<div className="row">
-						<Link to="/maths/multiply" className="link">
-							<Col className="box-3">
+					</Row>
+					<Row className="row">
+						<Link to="/multiplication" className="link">
+							<Button className="box-3">
 								<p className="text">x</p>
-							</Col>
+							</Button>
 						</Link>
-						<Link to="/maths/division" className="link">
-							<Col className="box-4">
+						<Link to="/division" className="link">
+							<Button className="box-4">
 								<p className="text">÷</p>
-							</Col>
+							</Button>
 						</Link>
-					</div>
+					</Row>
 				</Container>
 			</body>
 		);

@@ -4,6 +4,10 @@ import { Link } from 'react-router-dom';
 import './styles/mynavbar.css';
 
 class Mynav extends Component {
+	state = {
+		music: 'on',
+	};
+
 	render() {
 		return (
 			<Navbar className="navbar mynav">

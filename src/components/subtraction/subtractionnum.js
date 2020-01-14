@@ -4,7 +4,7 @@ import { Button } from 'react-bootstrap';
 import Endgame from '../endgameview';
 import '../styles/numbers.css';
 
-class Additionnum extends Component {
+class Subtractionnum extends Component {
 	state = {
 		correctans: 0,
 		wrongans: 0,
@@ -238,4 +238,4 @@ class Additionnum extends Component {
 	}
 }
 
-export default Additionnum;
+export default Subtractionnum;

@@ -4,7 +4,7 @@
 	grid-gap: 2rem;
 	display: grid;
 }
-.container .header {
+.header {
 	text-align: center;
 	font-size: 100px;
 	color: white;
@@ -16,10 +16,10 @@
 		1px -2px 0 #000, -1px -2px 0 #000, 2px 1px 0 #000, -2px 1px 0 #000, 2px -1px 0 #000, -2px -1px 0 #000;
 }
 
-.container .difficulties .easy {
+.difficulties .easy {
 	background-color: transparent;
-	background-image: url('../images/paper.png');
-	background-size: cover;
+	background-image: url('../images/cartoonpaper.png');
+	background-size: contain;
 	background-repeat: no-repeat;
 	border: solid 10px transparent;
 	margin-right: 10px;
@@ -37,16 +37,19 @@
 		1px -2px 0 #000, -1px -2px 0 #000, 2px 1px 0 #000, -2px 1px 0 #000, 2px -1px 0 #000, -2px -1px 0 #000;
 }
 
-.container .difficulties .easy:hover {
-	text-decoration-line: underline;
-	text-decoration-color: green;
+.difficulties .easy:hover {
+	background-image: url('../images/cartoonpaper.png');
+	background-size: cover;
+	background-position: center;
+	background-color: rgb(4, 119, 4);
 }
 
-.container .difficulties .medium {
+.difficulties .medium {
 	background-color: transparent;
-	background-image: url('../images/paper.png');
-	background-size: cover;
-	border: solid 10px rgb(255, 187, 0);
+	background-image: url('../images/cartoonpaper.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	border: solid 10px transparent;
 	margin-right: 10px;
 	width: 350px;
 	text-align: center;
@@ -60,15 +63,19 @@
 		1px -2px 0 #000, -1px -2px 0 #000, 2px 1px 0 #000, -2px 1px 0 #000, 2px -1px 0 #000, -2px -1px 0 #000;
 }
 
-.container .difficulties .medium:hover {
-	background-color: rgb(255, 187, 0);
+.difficulties .medium:hover {
+	background-image: url('../images/cartoonpaper.png');
+	background-size: cover;
+	background-position: center;
+	background-color: rgb(255, 217, 0);
 }
 
-.container .difficulties .hard {
+.difficulties .hard {
 	background-color: transparent;
-	background-image: url('../images/paper.png');
-	background-size: cover;
-	border: solid 10px rgb(197, 30, 0);
+	background-image: url('../images/cartoonpaper.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	border: solid 10px transparent;
 	width: 350px;
 	text-align: center;
 	font-family: 'Pirata One', cursive;
@@ -81,6 +88,9 @@
 		1px -2px 0 #000, -1px -2px 0 #000, 2px 1px 0 #000, -2px 1px 0 #000, 2px -1px 0 #000, -2px -1px 0 #000;
 }
 
-.container .difficulties .hard:hover {
+.difficulties .hard:hover {
+	background-image: url('../images/cartoonpaper.png');
+	background-size: cover;
+	background-position: center;
 	background-color: rgb(197, 30, 0);
 }

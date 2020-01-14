@@ -1,11 +1,12 @@
 .result-card {
 	margin-top: 20px;
-	height: 90vh;
+	height: 1200px;
 	background-color: transparent;
-	width: 80vw;
+	width: 1300px;
 	text-align: center;
 	padding-top: 10%;
-	background-image: url('../images/paper.png');
+	background-image: url('../images/cartoonpaper-rotated.png');
+	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;
 }
@@ -16,19 +17,19 @@
 		-1px 0px 0 #000, 1px 0px 0 #000, 2px 2px 0 #000, -2px 2px 0 #000, 2px -2px 0 #000, -2px -2px 0 #000,
 		0px 2px 0 #000, 0px -2px 0 #000, -2px 0px 0 #000, 2px 0px 0 #000, 1px 2px 0 #000, -1px 2px 0 #000,
 		1px -2px 0 #000, -1px -2px 0 #000, 2px 1px 0 #000, -2px 1px 0 #000, 2px -1px 0 #000, -2px -1px 0 #000;
-	font-size: 30px;
+	font-size: 3vmin;
 	font-family: 'Pirata One', cursive;
 	letter-spacing: 4px;
 }
 
 .img-parrot {
-	height: 400px;
-	width: 400px;
-	margin-left: 15vw;
+	height: 50vmin;
+	width: 40vmin;
+	margin-left: 20%;
 }
 
 .buttons {
-	padding-left: 18vw;
+	padding-left: 32vmin;
 	margin-top: 100px;
 	font-family: 'Pirata One', cursive;
 	letter-spacing: 4px;
@@ -47,7 +48,7 @@
 }
 
 .result-card .score {
-	font-size: 60px;
+	font-size: 6vmin;
 	font-family: 'Pirata One', cursive;
 	letter-spacing: 6px;
 	color: white;
@@ -56,4 +57,3 @@
 		0px 2px 0 #000, 0px -2px 0 #000, -2px 0px 0 #000, 2px 0px 0 #000, 1px 2px 0 #000, -1px 2px 0 #000,
 		1px -2px 0 #000, -1px -2px 0 #000, 2px 1px 0 #000, -2px 1px 0 #000, 2px -1px 0 #000, -2px -1px 0 #000;
 }
-/*https://www.freepngimg.com/thumb/parrot/37037-7-pirate-parrot-transparent-image.png*/
