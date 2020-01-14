@@ -45,8 +45,8 @@ class randomnumbers extends React.Component{
     }
 
     getAnswer(){
-        let x = 2; //menetelmä
-        let y = 3; //vaikeustaso
+        let x = 1; //menetelmä
+        let y = 1; //vaikeustaso
         let rem;
         if(x === 1 && y === 1){
             this.num1 = this.getRandom(1,6);
@@ -140,12 +140,9 @@ class randomnumbers extends React.Component{
             this.fakeans1 = this.getRandom(this.answer-this.getRandom(0, 9),this.answer+this.getRandom(1, 9));
         }
         while(this.fakeans2 === this.answer || this.fakeans2 < 0){
-            this.fakeans2 = this.getRandom(this.answer-this.getRandom(0, 9),this.answer+this.getRandom(1, 9)); 
-        }
-        while(this.fakeans2 === this.answer || this.fakeans2 < 0){
             this.fakeans2 = this.getRandom(this.answer-this.getRandom(0, 11),this.answer+this.getRandom(1, 11));
         }
-        while(this.fakeans2 === this.fakeans1 || this.fakeans2 < 0){
+        while(this.fakeans2 === this.fakeans1 || this.fakeans2 < 0 || this.fakeans2 === this.answer){
             this.fakeans2 = this.getRandom(this.answer-this.getRandom(0, 11),this.answer+this.getRandom(1, 11));
         }
         let numbers = this.randomizeOrder(this.fakeans1, this.fakeans2, this.answer);
@@ -163,7 +160,7 @@ class randomnumbers extends React.Component{
     render(){
         let data = this.getAnswer();
         return(
-    <h1>{data.num1}-{data.num2}={data.answer} , {data.fakeans1} , {data.fakeans2}</h1>
+    <h1>{data.num1}+{data.num2}={data.answer} , {data.fakeans1} , {data.fakeans2}</h1>
             
         );
 
