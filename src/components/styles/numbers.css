@@ -5,7 +5,7 @@
 	background-position: center;
 	padding-top: 10px;
 	width: 1200px;
-	height: 145ch;
+	height: 90vh;
 	text-align: center;
 	color: white;
 	text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000, 0px 1px 0 #000, 0px -1px 0 #000,
@@ -47,17 +47,24 @@
 	background-position: center;
 	border: 10px solid transparent;
 	width: 280px;
+	height: 180px;
 	letter-spacing: 4px;
 	background-image: url('../images/treasure.png');
 	background-size: contain;
 	background-repeat: no-repeat;
-	font-size: 5vmin;
+	font-size: 3vh;
 	text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000, 0px 1px 0 #000, 0px -1px 0 #000,
 		-1px 0px 0 #000, 1px 0px 0 #000, 2px 2px 0 #000, -2px 2px 0 #000, 2px -2px 0 #000, -2px -2px 0 #000,
 		0px 2px 0 #000, 0px -2px 0 #000, -2px 0px 0 #000, 2px 0px 0 #000, 1px 2px 0 #000, -1px 2px 0 #000,
 		1px -2px 0 #000, -1px -2px 0 #000, 2px 1px 0 #000, -2px 1px 0 #000, 2px -1px 0 #000, -2px -1px 0 #000;
 	font-family: 'Pirata One', cursive;
+	color: white;
 	letter-spacing: 8px;
+	-o-transition: 0.2s;
+	-ms-transition: 0.2s;
+	-moz-transition: 0.2s;
+	-webkit-transition: 0.2s;
+	transition: 0.2s;
 }
 
 .answers:hover {
@@ -108,6 +115,50 @@
 	width: 100vw;
 }
 
-.correct {
-	background-color: green;
+@media (max-width: 1236px) {
+	.numbg {
+		width: 85vw;
+		background-size: cover;
+	}
+
+	.bg {
+		height: 100vh;
+	}
+
+	.header-num {
+		padding-top: 120px;
+	}
+
+	.back-button {
+		margin-left: 5vw;
+		width: 150px;
+		font-size: 30px;
+	}
+}
+
+@media (max-width: 672px) {
+	.header-num {
+		padding-top: 7vh;
+	}
+
+	.equation {
+		font-size: 8vh;
+	}
+
+	.numbg {
+		font-size: 20;
+	}
+	.answers {
+		width: 100vw;
+		height: 12vh;
+		padding-bottom: 0;
+	}
+
+	.answers:hover {
+		background-size: contain;
+	}
+
+	.numbg .score {
+		margin-top: 0;
+	}
 }

@@ -1,18 +1,18 @@
 .bg {
-	background-image: url('../images/beach.png');
 	position: fixed;
 	width: 100vw;
 	height: 100vh;
 	background-size: cover;
 	overflow-y: scroll;
 	overflow-x: hidden;
-	padding-left: 200px;
+	background-image: url('../images/beach.png');
 }
 .container {
-	margin: 0 auto;
-	display: grid;
-	width: 100vw;
 	padding-bottom: 100px;
+}
+
+.row {
+	width: 100vw;
 }
 
 .text {
@@ -26,21 +26,23 @@
 	letter-spacing: 4px;
 }
 
-.container .header {
-	padding-right: 10vw;
+.header {
 	font-size: 100px;
+	width: 85vw;
 	color: white;
 	text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000, 0px 1px 0 #000, 0px -1px 0 #000,
 		-1px 0px 0 #000, 1px 0px 0 #000, 2px 2px 0 #000, -2px 2px 0 #000, 2px -2px 0 #000, -2px -2px 0 #000,
 		0px 2px 0 #000, 0px -2px 0 #000, -2px 0px 0 #000, 2px 0px 0 #000, 1px 2px 0 #000, -1px 2px 0 #000,
 		1px -2px 0 #000, -1px -2px 0 #000, 2px 1px 0 #000, -2px 1px 0 #000, 2px -1px 0 #000, -2px -1px 0 #000;
+	text-align: center;
+	font-family: 'Pirata One', cursive;
 }
 
-.container .row .link {
+.row .link {
 	text-decoration: none;
 }
 
-.container .box-1 {
+.box-1 {
 	text-align: center;
 	background-color: transparent;
 	background-image: url('../images/cartoonpaper.png');
@@ -48,7 +50,6 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	border: solid 10px transparent;
-
 	width: 450px;
 	height: 380px;
 	-o-transition: 0.2s;
@@ -58,14 +59,15 @@
 	transition: 0.2s;
 }
 
-.container .box-1:hover {
+.box-1:hover {
 	background-color: rgb(68, 206, 130);
+	border-color: transparent;
 	background-size: cover;
 	background-position: center;
 	background-image: url('../images/cartoonpaper.png');
 }
 
-.container .box-2 {
+.box-2 {
 	text-align: center;
 	background-color: transparent;
 	background-image: url('../images/cartoonpaper.png');
@@ -83,14 +85,15 @@
 	transition: 0.2s;
 }
 
-.container .box-2:hover {
+.box-2:hover {
 	background-color: rgb(158, 54, 255);
+	border-color: transparent;
 	background-size: cover;
 	background-position: center;
 	background-image: url('../images/cartoonpaper.png');
 }
 
-.container .box-3 {
+.box-3 {
 	text-align: center;
 	background-color: transparent;
 	background-image: url('../images/cartoonpaper.png');
@@ -109,14 +112,15 @@
 	transition: 0.2s;
 }
 
-.container .box-3:hover {
+.box-3:hover {
 	background-color: cyan;
+	border-color: transparent;
 	background-size: cover;
 	background-position: center;
 	background-image: url('../images/cartoonpaper.png');
 }
 
-.container .box-4 {
+.box-4 {
 	text-align: center;
 	background-color: transparent;
 	background-image: url('../images/cartoonpaper.png');
@@ -134,51 +138,32 @@
 	transition: 0.2s;
 }
 
-.container .box-4:hover {
+.box-4:hover {
 	background-color: rgb(255, 137, 137);
+	border-color: transparent;
 	background-size: cover;
 	background-position: center;
 	background-image: url('../images/cartoonpaper.png');
 }
 
 @media (min-width: 991px) {
-	.container {
-		grid-gap: 1rem;
-		display: grid;
-		width: 65vw;
-	}
 }
 
 @media (max-width: 1470px) {
-	.container {
-		grid-gap: 1rem;
-		display: grid;
-		width: 80vw;
-	}
 	.bg {
 		padding-left: 200px;
 	}
 }
 
 @media (min-width: 786px) {
-	.container {
-		width: 150vw;
-	}
 	.bg {
 		padding-left: 100px;
 	}
 }
 
 @media (max-width: 767px) {
-	.container {
-		width: 100vw;
-		margin-right: 50vw;
-	}
 	.bg {
-		padding-left: 10px;
-	}
-
-	.container .header {
-		font-size: 20vw;
+		padding-left: 0px;
+		width: 100vw;
 	}
 }

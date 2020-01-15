@@ -34,7 +34,7 @@ class Multiplicationview extends Component {
 		return (
 			<div className="bg">
 				{!this.state.difficulty ? (
-					<Container className="container">
+					<Container>
 						<Row className="header">
 							<Col>Valitse taso!</Col>
 						</Row>

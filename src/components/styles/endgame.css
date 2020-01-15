@@ -59,3 +59,24 @@
 		0px 2px 0 #000, 0px -2px 0 #000, -2px 0px 0 #000, 2px 0px 0 #000, 1px 2px 0 #000, -1px 2px 0 #000,
 		1px -2px 0 #000, -1px -2px 0 #000, 2px 1px 0 #000, -2px 1px 0 #000, 2px -1px 0 #000, -2px -1px 0 #000;
 }
+
+@media (max-width: 1236px) {
+	.numbg {
+		width: 85vw;
+		background-size: cover;
+	}
+
+	.bg {
+		height: 100vh;
+	}
+
+	.header-num {
+		padding-top: 120px;
+	}
+
+	.back-button {
+		margin-left: 5vw;
+		width: 150px;
+		font-size: 30px;
+	}
+}

@@ -35,22 +35,22 @@ class Additionview extends Component {
 		return (
 			<div className="bg">
 				{!this.state.difficulty ? (
-					<Container className="container">
-						<Row className="header">
+					<Container>
+						<Row className="diffheader">
 							<Col>Valitse taso!</Col>
 						</Row>
 						<Row className="difficulties">
-							<Button className="easy" value="easy" onClick={this.startMaths}>
+							<button className="easy" value="easy" onClick={this.startMaths}>
 								Normaali
-							</Button>
+							</button>
 
-							<Button className="medium" value="medium" onClick={this.startMaths}>
+							<button className="medium" value="medium" onClick={this.startMaths}>
 								Haastava
-							</Button>
+							</button>
 
-							<Button className="hard" value="hard" onClick={this.startMaths}>
+							<button className="hard" value="hard" onClick={this.startMaths}>
 								Mestari
-							</Button>
+							</button>
 						</Row>
 					</Container>
 				) : (

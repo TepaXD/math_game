@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Col } from 'react-grid-system';
+import { Row, Col, Container } from 'react-grid-system';
 import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './styles/endgame.css';
@@ -34,6 +34,7 @@ class Endgame extends Component {
 							<img src="https://www.iconpacks.net/icons/1/free-coin-icon-794-thumb.png" className="img" />
 						</Col>
 					</Row>
+
 					<Row className="message">
 						<Col>{this.message}</Col>
 					</Row>
@@ -46,17 +47,17 @@ class Endgame extends Component {
 					</Row>
 
 					<Row className="buttons">
-						<Button onClick={this.props.resetDifficulty} className="button">
+						<button onClick={this.props.resetDifficulty} className="button">
 							Vaihda tasoa
-						</Button>
-						<Button onClick={this.props.restartGame} className="button">
+						</button>
+						<button onClick={this.props.restartGame} className="button">
 							Pelaa uudestaan
-						</Button>
-						<Button className="button">
+						</button>
+						<button className="button">
 							<Link to="/" className="button">
 								Palaa valikkoon
 							</Link>
-						</Button>
+						</button>
 					</Row>
 				</div>
 			</div>

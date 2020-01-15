@@ -128,7 +128,7 @@ class Additionnum extends Component {
 		);
 
 		return (
-			<Container>
+			<div>
 				{!this.state.endgame ? (
 					<div className="numbg">
 						<Row className="header-num">
@@ -136,9 +136,9 @@ class Additionnum extends Component {
 						</Row>
 						<Row>
 							<Col>
-								<Button onClick={this.props.resetDifficulty} className="back-button">
+								<button onClick={this.props.resetDifficulty} className="back-button">
 									Poistu pelistä
-								</Button>
+								</button>
 							</Col>
 							<Col className="score">
 								<img
@@ -155,15 +155,15 @@ class Additionnum extends Component {
 						</Row>
 						<Row>
 							<Col>
-								<Button className="answers" value={data.answer} onClick={this.submitAnswer}>
+								<button className="answers" value={data.answer} onClick={this.submitAnswer}>
 									<div className="answercontainer">{data.answer}</div>
-								</Button>
-								<Button className="answers" value={data.fakeans1} onClick={this.submitAnswer}>
+								</button>
+								<button className="answers" value={data.fakeans1} onClick={this.submitAnswer}>
 									{data.fakeans1}
-								</Button>
-								<Button className="answers" value={data.fakeans2} onClick={this.submitAnswer}>
+								</button>
+								<button className="answers" value={data.fakeans2} onClick={this.submitAnswer}>
 									{data.fakeans2}
-								</Button>
+								</button>
 							</Col>
 						</Row>
 						<Row>
@@ -175,7 +175,7 @@ class Additionnum extends Component {
 				) : (
 					<Container>{view}</Container>
 				)}
-			</Container>
+			</div>
 		);
 	}
 }
