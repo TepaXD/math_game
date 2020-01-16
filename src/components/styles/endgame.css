@@ -1,3 +1,6 @@
+.bg {
+	padding-left: 0px;
+}
 .result-card {
 	margin-top: 20px;
 	height: 1200px;
@@ -60,23 +63,164 @@
 		1px -2px 0 #000, -1px -2px 0 #000, 2px 1px 0 #000, -2px 1px 0 #000, 2px -1px 0 #000, -2px -1px 0 #000;
 }
 
-@media (max-width: 1236px) {
-	.numbg {
+@media (max-width: 1276px) {
+	.result-card {
 		width: 85vw;
+		background-size: contain;
+	}
+
+	.result-card .score {
+		padding-top: 5vh;
+		font-size: 7vmin;
+	}
+
+	.message {
+		font-size: 3vmin;
+	}
+
+	.img-parrot {
+		height: 45vmin;
+		width: 35vmin;
+		margin-left: 20%;
+	}
+
+	.button {
+		font-size: 40px;
+		padding-bottom: 10px;
+	}
+
+	.buttons {
+		width: 80vw;
+		padding-left: 19vmin;
+	}
+}
+@media (max-width: 1030px) {
+	.result-card {
+		width: 90vw;
+		background-size: contain;
+	}
+
+	.result-card .score {
+		padding-top: 5vh;
+		font-size: 7vmin;
+	}
+
+	.message {
+		font-size: 3vmin;
+	}
+
+	.img-parrot {
+		height: 45vmin;
+		width: 35vmin;
+		margin-left: 20%;
+	}
+
+	.button {
+		font-size: 5vmin;
+		padding-bottom: 10px;
+	}
+
+	.buttons {
+		width: 80vw;
+		padding-left: 19vw;
+	}
+}
+
+@media (max-width: 991px) {
+	.result-card {
+		width: 75vw;
 		background-size: cover;
 	}
 
-	.bg {
-		height: 100vh;
+	.result-card .score {
+		padding-top: 50px;
+		font-size: 45px;
 	}
 
-	.header-num {
-		padding-top: 120px;
-	}
-
-	.back-button {
-		margin-left: 5vw;
-		width: 150px;
+	.message {
 		font-size: 30px;
+	}
+
+	.img-parrot {
+		height: 65vmin;
+		width: 55vmin;
+		margin-left: 15%;
+	}
+
+	.button {
+		width: 250px;
+		font-size: 30px;
+		padding-bottom: 10px;
+	}
+
+	.buttons {
+		padding-left: 80px;
+	}
+}
+
+@media (max-width: 787px) {
+	.bg {
+		padding-left: 10vw;
+	}
+	.result-card {
+		width: 75vw;
+		background-size: cover;
+	}
+
+	.result-card .score {
+		padding-top: 80px;
+		font-size: 65px;
+	}
+
+	.message {
+		font-size: 30px;
+	}
+
+	.img-parrot {
+		height: 65vmin;
+		width: 55vmin;
+		margin-left: 15%;
+	}
+
+	.result-card .button {
+		width: 35vw;
+		font-size: 35px;
+		padding-bottom: 10px;
+	}
+
+	.buttons {
+		padding-left: 7vw;
+	}
+}
+
+@media (max-width: 550px) {
+	.result-card {
+		width: 75vw;
+		background-size: cover;
+	}
+
+	.result-card .score {
+		padding-top: 7vh;
+		font-size: 14vmin;
+	}
+
+	.message {
+		font-size: 30px;
+	}
+
+	.img-parrot {
+		height: 65vmin;
+		width: 55vmin;
+		margin-left: 15%;
+	}
+
+	.result-card .button {
+		width: 250px;
+		font-size: 40px;
+		padding-bottom: 10px;
+	}
+
+	.buttons {
+		padding-left: 15vw;
 	}
 }
