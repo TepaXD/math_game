@@ -19,6 +19,7 @@ class Divisionnum extends Component {
 		this.fakeans2 = 0;
 		this.realans = 0;
 		this.counter = 1;
+		this.max = 20;
 
 		this.submitAnswer = this.submitAnswer.bind(this);
 		this.restartGame = this.restartGame.bind(this);
@@ -114,7 +115,7 @@ class Divisionnum extends Component {
 	}
 
 	submitAnswer(e) {
-		if (this.counter === 20) {
+		if (this.counter === this.max) {
 			this.setState({ endgame: true });
 		} else {
 			this.counter = this.counter + 1;
@@ -148,10 +149,9 @@ class Divisionnum extends Component {
 		);
 
 		return (
-			<Container>
+			<div>
 				{!this.state.endgame ? (
-					<Container className="numbg">
-						<Container className="container">
+					<div className="numbg">
 							<Row className="header-num">
 								<Col>Valitse oikea vastaus kerätäksesi kolikoita!</Col>
 							</Row>
@@ -169,8 +169,6 @@ class Divisionnum extends Component {
 									{this.state.correctans}
 								</Col>
 							</Row>
-						</Container>
-						<Container>
 							<Row className="equation">
 								<Col>
 									{data.num1}÷{data.num2}=
@@ -178,26 +176,26 @@ class Divisionnum extends Component {
 							</Row>
 							<Row>
 								<Col>
-									<Button className="answers" value={data.answer} onClick={this.submitAnswer}>
+									<button className="answers" value={data.answer} onClick={this.submitAnswer}>
 										{data.answer}
-									</Button>
-									<Button className="answers" value={data.fakeans1} onClick={this.submitAnswer}>
+									</button>
+									<button className="answers" value={data.fakeans1} onClick={this.submitAnswer}>
 										{data.fakeans1}
-									</Button>
-									<Button className="answers" value={data.fakeans2} onClick={this.submitAnswer}>
+									</button>
+									<button className="answers" value={data.fakeans2} onClick={this.submitAnswer}>
 										{data.fakeans2}
-									</Button>
+									</button>
 								</Col>
 							</Row>
 							<Row>
-								<Col className="score">Kysymys: {this.counter}/20</Col>
+								<Col className="score">Kysymys: {this.counter} / {this.max}</Col>
 							</Row>
-						</Container>
-					</Container>
+						
+					</div>
 				) : (
 					<Container>{view}</Container>
 				)}
-			</Container>
+			</div>
 		);
 	}
 }
