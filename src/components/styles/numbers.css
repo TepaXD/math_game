@@ -83,14 +83,15 @@
 	font-size: 10vmin;
 	font-family: 'Pirata One', cursive;
 	letter-spacing: 4px;
+	margin-right: 20px;
 }
 
 .back-button {
 	width: 15vw;
 	background-color: transparent;
 	border-color: transparent;
-	margin-left: 120px;
-	font-size: 4vmin;
+	margin-left: 20vw;
+	font-size: 6vmin;
 	font-family: 'Pirata One', cursive;
 	color: black;
 }
@@ -124,7 +125,7 @@
 	}
 
 	.header-num {
-		padding-top: 120px;
+		padding-top: 16vh;
 	}
 
 	.back-button {
@@ -135,8 +136,11 @@
 }
 
 @media (max-width: 672px) {
+	.bg {
+		padding-right: 50px;
+	}
 	.header-num {
-		padding-top: 7vh;
+		padding-top: 15vh;
 	}
 
 	.equation {
