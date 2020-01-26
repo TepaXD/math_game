@@ -131,32 +131,27 @@ class Additionnum extends Component {
 			<div>
 				{!this.state.endgame ? (
 					<div className="numbg">
-						<Row className="header-num">
-							<Col>Valitse oikea vastaus kerätäksesi kolikoita!</Col>
-						</Row>
-						<Row>
-							<Col>
-								<button onClick={this.props.resetDifficulty} className="back-button">
-									Poistu pelistä
-								</button>
-							</Col>
-							<Col className="score">
-								<img
-									src="https://www.iconpacks.net/icons/1/free-coin-icon-794-thumb.png"
-									className="img"
-								/>
-								{this.state.correctans}
-							</Col>
-						</Row>
-						<Row className="equation">
-							<Col>
+						<div className="header-num">
+							<div>Valitse oikea vastaus kerätäksesi kolikoita!</div>
+						</div>
+
+						<div className="subheader">
+							<button onClick={this.props.resetDifficulty} className="back-button">
+								Poistu pelistä
+							</button>
+							<img src="https://www.iconpacks.net/icons/1/free-coin-icon-794-thumb.png" className="img" />
+							{this.state.correctans}
+						</div>
+
+						<div className="equation">
+							<div>
 								{data.num1}+{data.num2}=
-							</Col>
-						</Row>
-						<Row>
-							<Col>
+							</div>
+						</div>
+						<div>
+							<div>
 								<button className="answers" value={data.answer} onClick={this.submitAnswer}>
-									<div className="answercontainer">{data.answer}</div>
+									{data.answer}
 								</button>
 								<button className="answers" value={data.fakeans1} onClick={this.submitAnswer}>
 									{data.fakeans1}
@@ -164,13 +159,13 @@ class Additionnum extends Component {
 								<button className="answers" value={data.fakeans2} onClick={this.submitAnswer}>
 									{data.fakeans2}
 								</button>
-							</Col>
-						</Row>
-						<Row>
-							<Col className="score">
+							</div>
+						</div>
+						<div>
+							<div className="score">
 								Kysymys: {this.counter} / {this.max}
-							</Col>
-						</Row>
+							</div>
+						</div>
 					</div>
 				) : (
 					<Container>{view}</Container>

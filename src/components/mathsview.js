@@ -10,7 +10,7 @@ class Mathsview extends Component {
 				<div className="header">
 					<div>Valitse lasku!</div>
 				</div>
-				<Container>
+				<div>
 					<div className="row">
 						<Link to="/addition" className="link">
 							<button className="box-1">
@@ -18,24 +18,24 @@ class Mathsview extends Component {
 							</button>
 						</Link>
 						<Link to="/subtraction" className="link">
-							<button className="box-2">
+							<button className="box-1">
 								<p className="text">-</p>
 							</button>
 						</Link>
 					</div>
 					<div className="row">
 						<Link to="/multiplication" className="link">
-							<button className="box-3">
+							<button className="box-1">
 								<p className="text">x</p>
 							</button>
 						</Link>
 						<Link to="/division" className="link">
-							<button className="box-4">
+							<button className="box-1">
 								<p className="text">÷</p>
 							</button>
 						</Link>
 					</div>
-				</Container>
+				</div>
 			</div>
 		);
 	}

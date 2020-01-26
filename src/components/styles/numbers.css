@@ -1,11 +1,15 @@
+.bg {
+	width: 100vw;
+	padding-right: 20vw;
+}
+
 .numbg {
-	background-image: url('../images/cartoonpaper-rotated.png');
+	background-image: url('../images/cartoonpaper.png');
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center;
 	padding-top: 10px;
-	width: 100vw;
-	height: 100ch;
+	width: 60vw;
 	text-align: center;
 	color: white;
 	text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000, 0px 1px 0 #000, 0px -1px 0 #000,
@@ -17,7 +21,6 @@
 .equation {
 	font-size: 15vmin;
 	letter-spacing: 5px;
-	margin-top: 5px;
 	text-align: center;
 	font-family: 'Pirata One', cursive;
 }
@@ -42,12 +45,12 @@
 	margin-right: 6px;
 	display: table-cell;
 	vertical-align: text-top;
-	padding-bottom: 90px;
+	padding-bottom: 170px;
 	background-color: transparent;
 	background-position: center;
 	border: 10px solid transparent;
-	width: 18vw;
-	height: 25vh;
+	width: 15vw;
+	height: 22vh;
 	letter-spacing: 4px;
 	background-image: url('../images/treasure.png');
 	background-size: contain;
@@ -83,14 +86,18 @@
 	font-size: 10vmin;
 	font-family: 'Pirata One', cursive;
 	letter-spacing: 4px;
-	margin-right: 20px;
+}
+
+.subheader {
+	width: 80vw;
+	font-family: 'Pirata One', cursive;
+	font-size: 10vmin;
 }
 
 .back-button {
-	width: 15vw;
+	width: 20vw;
 	background-color: transparent;
 	border-color: transparent;
-	margin-left: 20vw;
 	font-size: 6vmin;
 	font-family: 'Pirata One', cursive;
 	color: black;

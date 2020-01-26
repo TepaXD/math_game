@@ -6,7 +6,6 @@
 	overflow-y: scroll;
 	overflow-x: hidden;
 	background-image: url('../images/beach.png');
-
 }
 
 .container {
@@ -14,8 +13,8 @@
 }
 
 .row {
-	width: 100vw;
-	padding-left: 15vw;
+	width: 80vw;
+	padding-left: 30vw;
 }
 
 .text {
@@ -31,7 +30,7 @@
 
 .header {
 	font-size: 100px;
-	width: 85vw;
+	width: 95vw;
 	color: white;
 	text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000, 0px 1px 0 #000, 0px -1px 0 #000,
 		-1px 0px 0 #000, 1px 0px 0 #000, 2px 2px 0 #000, -2px 2px 0 #000, 2px -2px 0 #000, -2px -2px 0 #000,
@@ -39,7 +38,6 @@
 		1px -2px 0 #000, -1px -2px 0 #000, 2px 1px 0 #000, -2px 1px 0 #000, 2px -1px 0 #000, -2px -1px 0 #000;
 	text-align: center;
 	font-family: 'Pirata One', cursive;
-	padding-left: 15vw;
 	letter-spacing: 4px;
 }
 
@@ -65,7 +63,7 @@
 }
 
 .box-1:hover {
-	background-color: rgb(68, 206, 130);
+	background-color: lightskyblue;
 	border-color: transparent;
 	background-size: cover;
 	background-position: center;
@@ -151,7 +149,8 @@
 	background-image: url('../images/cartoonpaper.png');
 }
 
-@media (min-width: 991px) {}
+@media (min-width: 991px) {
+}
 
 @media (max-width: 1470px) {
 	.bg {
@@ -166,6 +165,9 @@
 }
 
 @media (max-width: 767px) {
+	.row {
+		padding-left: 0;
+	}
 	.bg {
 		padding-left: 0px;
 		width: 100vw;

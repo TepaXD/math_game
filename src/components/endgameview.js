@@ -26,7 +26,7 @@ class Endgame extends Component {
 	render() {
 		this.checkScore();
 		return (
-			<div>
+			<div className="endbg">
 				<div className="result-card">
 					<Row>
 						<Col className="score">
